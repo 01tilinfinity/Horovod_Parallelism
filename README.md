@@ -1,8 +1,8 @@
 ## CIFAR-10 ResNet-18 (Horovod + PyTorch)
 
-2023 한국 정보처리학회 추계학술대회 클라우드컴퓨팅 트랙 논문 
+2023 한국 정보처리학회 추계학술대회 클라우드컴퓨팅 트랙 논문
 [**<동기식 분산 딥러닝 환경에서 배치 사이즈 변화에 따른 모델 학습 성능 분석> (NIPA 원장상)**](https://kiss.kstudy.com/Detail/Ar?key=4059190)
- 의 코드입니다.
+의 코드입니다.
 Horovod를 사용해 CIFAR-10 데이터셋에서 ResNet-18 모델을 학습할 수 있습니다.
 
 ## Settings
@@ -77,3 +77,11 @@ tensorboard --logdir ./logs
 | `--batches-per-allreduce`  | allreduce 전에 로컬에서 누적할 batch 수                   |
 | `--fp16-allreduce`         | fp16 gradient compression 사용 여부                       |
 | `--use-adasum`             | Horovod Adasum 알고리즘 사용 여부                         |
+
+## etc.
+
+지속적인 버전관리와 트러블슈팅을 위해 작성한 매뉴얼을 첨부했습니다.
+추가적인 정보는 아래 노션 사이트에서 참고하실 수 있습니다.
+
+-   [Horovod 0.25.0 설치 가이드](https://superusagi.notion.site/Horovod-0-25-0-8db94356b93e4f9287b248878171b807?source=copy_link)
+-   [Horovod Troubleshooting tips](https://superusagi.notion.site/horovod-2c665d39281d80bb9076c43cf526b5fb?source=copy_link)

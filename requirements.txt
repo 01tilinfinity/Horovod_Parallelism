@@ -1,0 +1,25 @@
+# Deep learning frameworks
+# 매뉴얼 기준 테스트 환경:
+# - CUDA 11.1
+# - NCCL ubuntu1804-2.8.4-cuda11.1
+# - Python 3.6.9
+# - PyTorch 1.10.2+cu111
+# - TensorFlow 2.6.2
+# - CMake 3.22.3
+
+torch==1.10.2+cu111
+torchvision==0.11.3
+tensorflow==2.6.2
+
+# Horovod는 프레임워크 버전에 맞춰 빌드되어야 해서
+# 설치 시 아래처럼 환경변수와 함께 설치하는 것을 권장:
+# HOROVOD_GPU_OPERATIONS=NCCL HOROVOD_WITHOUT_MXNET=1 pip install --no-cache-dir horovod[tensorflow,keras,pytorch]
+horovod[tensorflow,keras,pytorch]
+
+# Logging / utils
+tensorboard
+tqdm
+
+# Build-related
+cmake==3.22.3
+PyYAML
